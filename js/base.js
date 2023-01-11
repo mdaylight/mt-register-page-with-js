@@ -14,7 +14,7 @@ function CheckTel(str) {
     if (str.value == "") {
         wartel.style.display = "inline-block";
         wartellen.style.display = "none";
-    } else if (telstr.length < 11 || telstr.length > 11 || telstr.value != [0-9]) {
+    } else if (telstr.length < 11 || telstr.length > 11) {
         wartel.style.display = "none";
         wartellen.style.display = "inline-block";
     } else {
@@ -112,4 +112,3 @@ function CheckPassLength(pstr) {
         pstrong.style.color = "#FFFFFF";
     }
 }
-

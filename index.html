@@ -27,7 +27,8 @@
                         <div class="u-span">
                             <span class="u-span">手机号</span>
                         </div>
-                        <input type="text" id="phonenumber" name="phone-number" onblur="CheckTel(this)" required>
+                        <input type="text" id="phonenumber" name="phone-number" onblur="CheckTel(this)"
+                            onkeyup="this.value=this.value.replace(/\D/g,'')" required>
                         <span class="u-waring u-waring-tel" id="u-waring-tel">
                             <span id="tip-stats"></span>
                             <span>请输入您的手机号码</span>
