@@ -1,0 +1,251 @@
+/* 全局 */
+html {
+    position: absolute;
+}
+
+body {
+    position: relative;
+}
+
+a {
+    text-decoration: none;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Hiragino Sans GB', 'WenQuanYi Micro Hei', tahoma, sans-serif;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+
+/* 头部 */
+.g-header {
+    width: 100vw;
+    height: 67px;
+    position: relative;
+}
+
+.g-header img {
+    width: 150px;
+    height: 55px;
+    margin-left: 73px;
+    margin-top: 13px;
+    margin-bottom: 13px;
+}
+
+.g-header .u-btn-logn {
+    margin-right: 87px;
+    margin-top: 30px;
+}
+
+.g-header .u-btn-logn input {
+    width: 58px;
+    height: 30px;
+    border: 0px;
+    background-color: #ffc200;
+    border-radius: 0.2em;
+}
+
+.g-header hr {
+    border-top: 2px solid #d8d8d8;
+}
+
+
+/* 表单 */
+.g-form {
+    margin-top: 58px;
+    margin-left: 105px;
+    margin-bottom: 34.5px;
+    position: relative;
+}
+
+.g-form .m-form {
+    margin-left: 320px;
+}
+
+/* u-text 通用属性 */
+.g-form .u-text {
+    margin-top: 30px;
+}
+
+.g-form .u-text input {
+    width: 350px;
+    height: 44px;
+    border: 1px solid #aaa;
+    border-style: double;
+    font-size: large;
+    padding: 4px;
+}
+
+.g-form .u-span {
+    display: inline-block;
+    width: 100px;
+    height: 48px;
+    font-size: 13px;
+}
+
+.g-form .u-span span {
+    text-align: right;
+    margin-left: -12.5px;
+    color: #333333;
+}
+
+.g-form .u-waring {
+    margin-left: 32.5px;
+    color: #737373;
+}
+
+.g-form .u-waring span {
+    font-size: 11px;
+}
+
+.g-form .u-content {
+    margin-left: 105px;
+    display: block;
+}
+
+.g-form .u-content.smscode {
+    margin-bottom: -15px;
+}
+
+.g-form .u-content.statsbar {
+    margin-top: -10px;
+}
+
+.g-form .u-content span {
+    font-size: 14px;
+    font-weight: bolder;
+}
+
+.g-form .u-content span[id="s1"] a {
+    color: #fe8c00;
+}
+
+.g-form .u-content div {
+    display: inline-block;
+    background-color: #eeeeee;
+    width: 116px;
+    height: 24px;
+    text-align: center;
+    color: #d8d8d8;
+}
+
+.g-form .button {
+    margin-top: 20px;
+    margin-left: 105px;
+    margin-bottom: 20px;
+}
+
+.g-form .button #submit {
+    width: 354px;
+    height: 40px;
+    border: 0px;
+    font-size: 15px;
+    font-weight: bolder;
+    letter-spacing: 2px;
+    background-color: #ffd100;
+    text-align: center;
+    display: inline-block;
+}
+
+.accept-ulp {
+    display: inline-flex;
+    font-size: 13px;
+    width: 340px;
+    height: 50px;
+    margin-left: 105px;
+    color: rgba(0, 0, 0, 0.50);
+    position: relative;
+}
+
+.accept-ulp p {
+    margin-left: 10px;
+}
+
+.accept-ulp p a {
+    color: #ffa753;
+    font-weight: bolder;
+}
+
+.g-form .m-form input:focus {
+    border: 1px solid #aaa;
+    outline: none;
+}
+
+.u-waring-tel {
+    display: none;
+}
+
+.u-waring-tel-num {
+    display: none;
+}
+
+.u-waring-smscode {
+    display: none;
+}
+
+.u-waring-smscode-num {
+    display: none;
+}
+
+.u-waring-passwd {
+    display: none;
+}
+
+.u-waring-passwd-length {
+    display: none;
+}
+
+.u-waring-confirm-passwd {
+    display: none;
+}
+
+.u-waring-confirm-passwd-val {
+    display: none;
+}
+
+#tip-stats {
+    background: url("../images/icons.png");
+    background-position: 0 -295px;
+    width: 19px;
+    height: 19px;
+    overflow: hidden;
+    display: inline-flex;
+    margin-bottom: -4px;
+}
+
+
+/* 尾部 */
+.g-footer {
+    position: relative;
+}
+
+.g-footer hr {
+    border-top: 1px solid #d8d8d8;
+}
+
+.g-footer p {
+    margin-top: 27.5px;
+    font-size: 13px;
+    text-align: center;
+    color: #999;
+}
+
+
+/* PC页面较小屏幕适应 */
+@media screen and (max-width:890px) {
+    .m-form {
+        margin-left: 0px !important;
+    }
+    .g-form {
+        margin-left: 0px !important;
+    }
+}

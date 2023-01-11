@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/base.css">
+    <script src="./js/base.js"></script>
+    <title>美团注册页面</title>
+</head>
+
+<body>
+    <div class="g-main">
+        <div class="g-header">
+            <a href="#"><img src="./images/logo.png" alt=""></a>
+            <div class="u-btn-logn fr">
+                <span>已有美团账号?</span>
+                <a href="#"><input type="button" value="登录"></a>
+            </div>
+            <hr>
+        </div>
+        <div class="g-form">
+            <div class="m-form">
+                <form action="" method="post">
+                    <div class="u-text">
+                        <div class="u-span">
+                            <span class="u-span">手机号</span>
+                        </div>
+                        <input type="text" id="phonenumber" name="phone-number" onblur="CheckTel(this)" required>
+                        <span class="u-waring u-waring-tel" id="u-waring-tel">
+                            <span id="tip-stats"></span>
+                            <span>请输入您的手机号码</span>
+                        </span>
+                        <span class="u-waring u-waring-tel-num" id="u-waring-tel-num">
+                            <span id="tip-stats"></span>
+                            <span>请输入正确的11位手机号码</span>
+                        </span>
+                        <div class="u-content smscode">
+                            <span id="s1"><a href="#" onclick="GetSmscode()">免费获取动态密码</a></span>
+                        </div>
+                    </div>
+                    <div class="u-text">
+                        <div class="u-span">
+                            <span class="u-span">短信动态码</span>
+                        </div>
+                        <input type="text" id="smscode" name="smscode" onblur="CheckSmscode(this)" required>
+                        <span class="u-waring u-waring-smscode" id="u-waring-smscode">
+                            <span id="tip-stats"></span>
+                            <span>请输入短信动态码</span>
+                        </span>
+                        <span class="u-waring u-waring-smscode-num" id="u-waring-smscode-num">
+                            <span id="tip-stats"></span>
+                            <span>请输入正确的短信动态码</span>
+                        </span>
+                        <div class="u-content">
+                        </div>
+                    </div>
+                    <div class="u-text">
+                        <div class="u-span">
+                            <span class="u-span">创建密码</span>
+                        </div>
+                        <input type="password" id="password" name="password" onblur="CheckPassword(this)"
+                            oninput="CheckPassLength(this)" required>
+                        <span class="u-waring u-waring-passwd" id="u-waring-passwd">
+                            <span id="tip-stats"></span>
+                            <span>请填写密码</span>
+                        </span>
+                        <span class="u-waring u-waring-passwd-length" id="u-waring-passwd-length">
+                            <span id="tip-stats"></span>
+                            <span>密码至少需要8个字符，请重新输入</span>
+                        </span>
+                        <div class="u-content statsbar">
+                            <div id="p-weak">
+                                弱
+                            </div>
+                            <div id="p-normal">
+                                中
+                            </div>
+                            <div id="p-strong">
+                                强
+                            </div>
+                        </div>
+                        <div class="u-text">
+                            <div class="u-span">
+                                <span class="u-span">确认密码</span>
+                            </div>
+                            <input type="password" id="confirmpassword" name="confirm-password"
+                                onblur="CheckCPassword(this)" oninput="ComparePassword(this)" required>
+                            <span class="u-waring u-waring-confirm-passwd" id="u-waring-confirm-passwd">
+                                <span id="tip-stats"></span>
+                                <span>请再次输入密码</span>
+                            </span>
+                            <span class="u-waring u-waring-confirm-passwd-val" id="u-waring-confirm-passwd-val">
+                                <span id="tip-stats"></span>
+                                <span>两次输入的密码不一致，请重新输入</span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="button">
+                        <button type="submit" id="submit" name="submit">完成注册并登录</button>
+                    </div>
+                    <div class="accept-ulp">
+                        <input type="checkbox" id="accept" name="accept" value="accept">
+                        <p>我已阅读并同意 <a href="#" id="ula">《美团用户协议》</a> <a href=""
+                                id="ulpa">《隐私政策》</a>，并授权美团使用该美团账号信息（如昵称、头像、收货地址）进行统一管理。</p>
+                        </input>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="g-footer">
+            <hr>
+            <p>&copy;meituan.com&nbsp;&nbsp;&nbsp;&nbsp;京ICP证070791号&nbsp;&nbsp;&nbsp;&nbsp;京公网安备11010502025545号</p>
+        </div>
+    </div>
+</body>
+
+</html>
