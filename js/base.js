@@ -112,3 +112,4 @@ function CheckPassLength(pstr) {
         pstrong.style.color = "#FFFFFF";
     }
 }
+
