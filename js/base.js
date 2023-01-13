@@ -9,7 +9,7 @@ function checkTel(str) {
     let telstr = str.value;
     let wartel = document.querySelector("#u-waring-tel");
     let wartellen = document.querySelector("#u-waring-tel-num");
-    let numberonly = /^[0-9]+.?[0-9]*$/;
+    let numberonly = /^[1-9]+[0-9]*]*$/;
     if (str.value == "") {
         wartel.style.display = "inline-block";
         wartellen.style.display = "none";
