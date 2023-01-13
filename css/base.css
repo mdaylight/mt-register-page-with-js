@@ -241,7 +241,7 @@ a {
 
 
 /* PC页面较小屏幕适应 */
-@media screen and (max-width:890px) {
+@media screen and (max-width:889px) {
     .m-form {
         margin-left: 0px !important;
     }

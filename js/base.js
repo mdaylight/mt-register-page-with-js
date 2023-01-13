@@ -1,20 +1,20 @@
-// 其他功能
-// 获取短信验证码（此功能需要第三方服务，预留）
-function GetSmscode() {
+// 获取短信验证码(此功能需要第三方服务，预留)
+function getSmsCode() {
     alert("该功能暂未实现");
 }
 
-// 依赖Blur事件的功能
 // 检查输入框并给出提示
 // 检查电话号码
-function CheckTel(str) {
+function checkTel(str) {
     let telstr = str.value;
     let wartel = document.querySelector("#u-waring-tel");
     let wartellen = document.querySelector("#u-waring-tel-num");
+    let numberonly = /^[0-9]+.?[0-9]*$/;
     if (str.value == "") {
         wartel.style.display = "inline-block";
         wartellen.style.display = "none";
-    } else if (telstr.length < 11 || telstr.length > 11) {
+        // 条件：小于11位，大于11位，或者不是数字
+    } else if (telstr.length < 11 || telstr.length > 11 || !numberonly.test(telstr) ) {
         wartel.style.display = "none";
         wartellen.style.display = "inline-block";
     } else {
@@ -23,8 +23,16 @@ function CheckTel(str) {
     }
 }
 
+// 焦点获取后重置提示(检查电话号码)
+function resetCheckTel() {
+    let wartel = document.querySelector("#u-waring-tel");
+    let wartellen = document.querySelector("#u-waring-tel-num");
+    wartel.style.display = "none";
+    wartellen.style.display = "none";
+}
+
 // 检查短信验证码
-function CheckSmscode(str) {
+function checkSmsCode(str) {
     let smsstr = str.value;
     let warsmscode = document.querySelector("#u-waring-smscode");
     let warsmscodelen = document.querySelector("#u-waring-smscode-num");
@@ -40,8 +48,17 @@ function CheckSmscode(str) {
     }
 }
 
+// 焦点获取后重置提示(检查短信验证码)
+function resetChecksmscode() {
+    let warsmscode = document.querySelector("#u-waring-smscode");
+    let warsmscodelen = document.querySelector("#u-waring-smscode-num");
+    warsmscode.style.display = "none";
+    warsmscodelen.style.display = "none";
+
+}
+
 // 检查密码
-function CheckPassword(str) {
+function checkPassword(str) {
     let passstr = str.value;
     let warpass = document.querySelector("#u-waring-passwd");
     let warpasslen = document.querySelector("#u-waring-passwd-length");
@@ -57,8 +74,16 @@ function CheckPassword(str) {
     }
 }
 
+// 焦点获取后重置提示(检查密码)
+function resetCheckPassword() {
+    let warpass = document.querySelector("#u-waring-passwd");
+    let warpasslen = document.querySelector("#u-waring-passwd-length");
+    warpass.style.display = "none";
+    warpasslen.style.display = "none";
+}
+
 // 检查确认密码
-function CheckCPassword(str) {
+function checkcPassword(str) {
     let warcpass = document.querySelector("#u-waring-confirm-passwd");
     if (str.value == "") {
         warcpass.style.display = "inline-block";
@@ -67,23 +92,29 @@ function CheckCPassword(str) {
     }
 }
 
-// 依赖Input事件的功能
-// 密码输入框相等性检查
-// passwd1n => 设置密码框 passwd2n => 重复密码框
-function ComparePassword(str) {
+// 检查密码是否相同
+// passwd1n => 设置密码(框) 
+// passwd2n => 重复密码(框)
+function comparePassword(str) {
     let passwd1 = document.querySelector("#password");
     let passwd1n = passwd1.value;
     let passwd2n = str.value;
-    let warcapass = document.querySelector("#u-waring-confirm-passwd-val");
+    let warcapassval = document.querySelector("#u-waring-confirm-passwd-val");
     if (passwd1n != passwd2n && passwd2n.length != 0) {
-        warcapass.style.display = "inline-block";
+        warcapassval.style.display = "inline-block";
     } else {
-        warcapass.style.display = "none";
+        warcapassval.style.display = "none";
     }
 }
 
+// 焦点获取后重置提示(检查确认密码)
+function resetCheckcPassword() {
+    let warcpass = document.querySelector("#u-waring-confirm-passwd");
+    warcpass.style.display = "none";
+}
+
 //检查密码长度并给出强度反馈
-function CheckPassLength(pstr) {
+function checkPassLength(pstr) {
     let ppstr = pstr.value;
     let pweak = document.querySelector("#p-weak");
     let pnormal = document.querySelector("#p-normal");

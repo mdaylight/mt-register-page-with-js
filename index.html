@@ -27,8 +27,8 @@
                         <div class="u-span">
                             <span class="u-span">手机号</span>
                         </div>
-                        <input type="text" id="phonenumber" name="phone-number" onblur="CheckTel(this)"
-                            onkeyup="this.value=this.value.replace(/\D/g,'')" required>
+                        <input type="text" id="phonenumber" name="phone-number" onblur="checkTel(this)"
+                            onfocus="resetCheckTel()" required>
                         <span class="u-waring u-waring-tel" id="u-waring-tel">
                             <span id="tip-stats"></span>
                             <span>请输入您的手机号码</span>
@@ -38,14 +38,15 @@
                             <span>请输入正确的11位手机号码</span>
                         </span>
                         <div class="u-content smscode">
-                            <span id="s1"><a href="#" onclick="GetSmscode()">免费获取动态密码</a></span>
+                            <span id="s1"><a href="#" onclick="getSmsCode()">免费获取动态密码</a></span>
                         </div>
                     </div>
                     <div class="u-text">
                         <div class="u-span">
                             <span class="u-span">短信动态码</span>
                         </div>
-                        <input type="text" id="smscode" name="smscode" onblur="CheckSmscode(this)" required>
+                        <input type="text" id="smscode" name="smscode" onblur="checkSmsCode(this)"
+                            onfocus="resetChecksmscode()" required>
                         <span class="u-waring u-waring-smscode" id="u-waring-smscode">
                             <span id="tip-stats"></span>
                             <span>请输入短信动态码</span>
@@ -61,8 +62,8 @@
                         <div class="u-span">
                             <span class="u-span">创建密码</span>
                         </div>
-                        <input type="password" id="password" name="password" onblur="CheckPassword(this)"
-                            oninput="CheckPassLength(this)" required>
+                        <input type="password" id="password" name="password" onblur="checkPassword(this)"
+                            oninput="checkPassLength(this)" onfocus="resetCheckPassword()" required>
                         <span class="u-waring u-waring-passwd" id="u-waring-passwd">
                             <span id="tip-stats"></span>
                             <span>请填写密码</span>
@@ -87,7 +88,8 @@
                                 <span class="u-span">确认密码</span>
                             </div>
                             <input type="password" id="confirmpassword" name="confirm-password"
-                                onblur="CheckCPassword(this)" oninput="ComparePassword(this)" required>
+                                onblur="checkcPassword(this)" onfocus="resetCheckcPassword()"
+                                onchange="comparePassword(this)" required>
                             <span class="u-waring u-waring-confirm-passwd" id="u-waring-confirm-passwd">
                                 <span id="tip-stats"></span>
                                 <span>请再次输入密码</span>
